@@ -2,7 +2,7 @@
 
 ### [FCC Intermediate Project - 2/4 : Local-Weather-App](https://www.freecodecamp.org/challenges/show-the-local-weather)
 
-**Description**: Local-Weather-App is a custom weather app that displays weather data based on user location using *[this](https://fcc-weather-api.glitch.me/) api.
+**Description**: Local-Weather-App is a custom weather app that displays weather data based on user location using * [this](https://fcc-weather-api.glitch.me/) api.
 
 **User-story**:
 
