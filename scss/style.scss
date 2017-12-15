@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya);
+@import url(https://fonts.googleapis.com/css?family=Salsa);
+@import url(https://fonts.googleapis.com/css?family=Flavors);
+$hd:white;
+$modal:teal;
+$font-hd:'Salsa',helvetica;
+$font-gen:'Alegreya',helvetica;
+$font-foo:'Flavors',helvetica;
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+/*--------------------------------------------------*/
+* {
+    box-sizing: border-box;    padding:0;margin:0;
+  }
+html,body{height:100%;}
+body{
+  padding-top:3rem;
+  background-color:black;
+  color:white;
+  font-size:2rem;
+  font-family:$font-hd;
+  text-align: center;
+}
+
+.header{
+  font-family:$font-hd;
+  font-size:2.5rem;
+  color:white;
+  text-align:center;
+}
+
+footer{
+ //margin-bottom:0px;
+ font-family:$font-foo;
+ font-size:1rem;
+  color:pink;
+  opacity:0.5;
+  word-spacing:0.5rem;
+  letter-spacing:0.3rem;
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform:translate(-50%,0);
+  margin:0;
+}
+.wrapper-inner{
+  margin:50px;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+img{
+  width: 50px;
+  height: 50px;
+  background-color:white;
+  border-radius:10px;
+}
+.type{
+  color:blue;
+  cursor:pointer;
+  #cent{
+    font-family:$font-hd;
+    font-size:2.3rem;
+  }
+}
+.con-temp{
+  font-size:3rem;
+  font-family:$font-hd;
+  color:pink;
+}
+/*******details page**************/
+.btn-info{
+ cursor:pointer;
+}
+//background
+.details-modal{
+  display:none;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  //overflow:auto;
+  background-color:rgba(0,0,0,0.6);
+}
+//content
+.modal-inner{
+  position:relative;
+  //background-color:$modal;
+  background:linear-gradient(to bottom,teal 0%,mediumseagreen 100%);
+  margin:10% auto;
+  padding:0px;
+  @include box-shadow(0 0 1.5rem 0 white, 0 0 1.5rem pink );
+  width: 70%;
+  height:auto;
+  border-radius:50%;
+  animation:modal-animate 0.4s;
+  
+ .modal-content{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   overflow:wrap;
+  //text-align:center;
+  font-size:1.7rem;
+  font-family:$font-gen;
+  color:#000;
+  padding:1rem;
+ }
+}
+@keyframes modal-animate{
+  from{ top:-300px;opacity:0;}
+  to{ top:0px; opacity:1;}
+}
